@@ -9,7 +9,8 @@ import { useEffect } from 'react'
  * @returns
  */
 export default function Live2D() {
-  const { theme, switchTheme } = useGlobal()
+  const { theme } = useGlobal()
+  // const { theme, switchTheme } = useGlobal()
   const showPet = JSON.parse(siteConfig('WIDGET_PET'))
   const petLink = siteConfig('WIDGET_PET_LINK')
   const petSwitchTheme = siteConfig('WIDGET_PET_SWITCH_THEME')
@@ -36,7 +37,7 @@ export default function Live2D() {
 
   function handleClick() {
     if (petSwitchTheme) {
-      switchTheme()
+    //   switchTheme()
     }
   }
 
@@ -47,8 +48,8 @@ export default function Live2D() {
   return (
     <canvas
       id='live2d'
-      width='280'
-      height='250'
+      width='316'
+      height='400'
       onClick={handleClick}
       className='cursor-grab'
       onMouseDown={e => e.target.classList.add('cursor-grabbing')}
